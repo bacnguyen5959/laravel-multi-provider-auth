@@ -291,52 +291,6 @@ Bạn sẽ thấy thông tin user đã được lưu với các trường:
 
 ---
 
-## 🔒 Bảo mật trước khi push lên GitHub
-
-### ⚠️ QUAN TRỌNG: Kiểm tra trước khi commit
-
-Trước khi push code lên GitHub, **BẮT BUỘC** chạy script kiểm tra bảo mật:
-
-**Windows (PowerShell):**
-```powershell
-cd laravel-oauth
-.\check-security.ps1
-```
-
-**Linux/Mac:**
-```bash
-cd laravel-oauth
-bash check-security.sh
-```
-
-### 📋 Checklist bảo mật
-
-- [ ] File `.env` KHÔNG có trong `git status`
-- [ ] File `.env.example` chỉ chứa placeholder values
-- [ ] Không có Client ID/Secret thật trong source code
-- [ ] Không có database password trong source code
-- [ ] Đã chạy script `check-security.ps1` hoặc `check-security.sh`
-- [ ] Đã đọc file `SECURITY.md`
-
-### 🚨 Nếu đã commit nhầm credentials
-
-```bash
-# Xóa file khỏi Git (giữ lại local)
-git rm --cached .env
-
-# Commit
-git commit -m "Remove sensitive file"
-
-# Đổi credentials ngay lập tức:
-# - Google: Xóa OAuth Client cũ, tạo mới
-# - Facebook: Reset App Secret
-# - Database: Đổi password MySQL
-```
-
-Xem chi tiết trong file `SECURITY.md`
-
----
-
 ## 📚 Tài liệu tham khảo
 
 - [Laravel Documentation](https://laravel.com/docs)
@@ -349,18 +303,6 @@ Xem chi tiết trong file `SECURITY.md`
 ## 📄 License
 
 This project is open-sourced software licensed under the MIT license.
-
----
-
-## 👨‍💻 Tác giả
-
-**Nguyễn Trần Xuân Bắc**  
-Mã sinh viên: 23810310100  
-Lớp: D18CNPM2
-
----
-
-## 📞 Hỗ trợ
 
 Nếu gặp vấn đề, vui lòng:
 1. Kiểm tra file `INSTALLATION_GUIDE.md` để biết hướng dẫn chi tiết
