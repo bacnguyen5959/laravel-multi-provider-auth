@@ -204,7 +204,6 @@ laravel-oauth/
 ├── routes/
 │   └── web.php                         # Routes
 ├── .env.example                        # Template file .env
-├── INSTALLATION_GUIDE.md               # Hướng dẫn cài đặt chi tiết
 ├── MANUAL_DATABASE_SETUP.sql           # Script tạo database thủ công
 └── README.md                           # File này
 ```
